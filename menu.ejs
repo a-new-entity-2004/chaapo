@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chappo.com</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../static/menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen and (max-width:627px)" href="../static/homephone.css">
+    <script src="https://kit.fontawesome.com/769e513ac4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo" src="../static/logo.png" alt="">
+            <p>Welcome to Chaapo!!!</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"        aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About-us</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <section id="intro">
+        <!-- <h1>www.Chappo.com</h1> -->
+        <p>!!Welcome to Rajendra Bhawan Cafe IIT Roorkee!!</p>
+        <p class="time">Timing     : 2pm to 2am</p>
+        <a target="_blank" href="https://www.google.com/search?q=iit%20roorkee%20rajendra%20bhawan%20canteen%20location&sxsrf=AJOqlzUqbR5lhNOfrOIEx64LMFP48KCZ9g:1673264578178&ei=fP27Y-3VDbOlz7sPqLCiuAk&ved=2ahUKEwiVqLCmtLr8AhVOyHMBHeuyBXUQvS56BAgLEAE&uact=5&oq=iit+roorkee+rajendra+bhawan+canteen+location&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAE6CggAEEcQ1gQQsAM6BAgjECc6BwgAEIAEEA06CQgAEIAEEA0QCjoHCCMQ6gIQJzoPCAAQjwEQ6gIQtAIQChgBOg0IABCPARDqAhC0AhgBOgUIABCRAjoLCAAQgAQQsQMQgwE6CAgAELEDEIMBOhEILhCABBCxAxCDARDHARDRAzoFCAAQgAQ6CgguEIcCEIAEEBQ6CggAEIAEEIcCEBQ6CwguEIAEEMcBEK8BOg4ILhCABBCxAxCDARDUAjoICC4QsQMQgAQ6CAguEIAEELEDOg0ILhCABBCHAhDUAhAUOgIIJjoGCAAQFhAeOggIABAWEB4QDzoICC4QgAQQ1AI6BQgAEIYDOgQIIRAVOgcIIRCgARAKSgQIQRgASgQIRhgBUOIDWOa0AWCMuQFoCXAAeASAAbQCiAGOPpIBCDAuNDUuNC4xmAEAoAEBsAEUyAEIwAEB2gEGCAEQARgK&sclient=gws-wiz-serp&tbs=lf:1,lf_ui:4&tbm=lcl&rflfq=1&num=10&rldimm=10112486988438603674&lqi=CixpaXQgcm9vcmtlZSByYWplbmRyYSBiaGF3YW4gY2FudGVlbiBsb2NhdGlvbiIDiAEBSNmk7IqKq4CACFo7EAAQAhADEAQYABgBGAMYBCIjaWl0IHJvb3JrZWUgcmFqZW5kcmEgYmhhd2FuIGNhbnRlZW4qBAgDEAOSAQRjYWZlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJOY2pWWFRIUm5SUkFCqgErEAEqJyIjaWl0IHJvb3JrZWUgcmFqZW5kcmEgYmhhd2FuIGNhbnRlZW4oAA&sa=X&rlst=f#rlfi=hd:;si:10112486988438603674;mv:[[29.86586665721859,77.89467362476239],[29.863266161598958,77.88868693424115],null,[29.864566417880344,77.89168027950177],18]">Location:<i class="fa-solid fa-location-pin"></i></a>
+    </section>
+    <section id="search">
+        <h1>Search the item you want to eat!!</h1>
+        <div id="searchbox">
+            <form>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-please" name="search" placeholder="Search items" onkeyup="searchMe()">
+            </form>
+            <div class="itemlist">
+                <div class="p-details">
+                    <p><strong><p>TEA</p></strong>&emsp;price:10rs</p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>HOT COFFEE</p></strong>&emsp; price:15rs </p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>MILK</p></strong>&emsp; price:15rs</p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>COLD COFFEE</p></strong>&emsp;price:25rs</p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>MILK SHAKE</p></strong>&emsp; price:25rs</p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>MASALA PATTIES</p></strong>&emsp;price:20rs</p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>MAGGI</p></strong>&emsp; price:30rs</p>
+                </div>
+                <div class="p-details">
+                    <p><strong><p>BURGER</p></strong>&emsp; price:30rs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="foodarena">
+        <% let arr = [
+            {
+                Name:"tea",
+                Price: 10
+            },
+            {
+                Name:"hot coffee",
+                Price: 15
+            },
+            {
+                Name:"milk",
+                Price: 15
+            },
+            {
+                Name: "cold coffee",
+                Price: 25
+            },
+            {
+                Name: "milk shake",
+                Price: 25
+            },
+            {
+                Name: "masala patties",
+                Price: 20
+            },
+            {
+                Name: "maggi",
+                Price: 30
+            },
+            {
+                Name: "burger",
+                Price: 30
+            }
+        ];
+        console.log(arr[0].Name) %>
+        <h1>Food Items of Rajendra Bhawan Cafe</h1>
+        <div id="cardcontainer">
+            <% for (let i = 0; i < 8; i++) { %>
+            <div class="cards">
+                <div class="img1"></div>
+                <h4><%= arr[i].Name %></h4>
+                <h6><%= arr[i].Price %></h6>
+                <div class="rating">
+                    <div class="emoji">✨</div>
+                    <div class="status">Rating</div>
+                </div>
+                <div class="stars">
+                    <div class="star" data-rate="5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                        </svg>
+                    </div>
+                    <div class="star" data-rate="4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                        </svg>
+                    </div>
+                    <div class="star" data-rate="3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                        </svg>
+                    </div>
+                    <div class="star" data-rate="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                        </svg>
+                    </div>
+                    <div class="star" data-rate="1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                        </svg>
+                    </div>
+                </div>
+                <div id="rate" onload="callMe()">
+
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../static/menu.js"></script>
+</body>
+</html>
