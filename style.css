@@ -1,0 +1,115 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    background-color: lightgreen;
+}
+
+.main_title {
+    font-size: 4em;
+    color: azure;
+    text-shadow: 3px 3px black;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.description {
+    font-size: 0.9em;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: darkslateblue;
+}
+
+.howto {
+    color: blue;
+    margin-bottom: 100px;
+    font-size: 2em;
+}
+
+.alphabets {
+    display: inline-block;
+    font-size: 2em;
+    color: lightgreen;
+    background-color: azure;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 3.2px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.alphabets:hover {
+    cursor: pointer;
+    color: azure;
+    background-color: lightgreen;
+    border: 1px solid white;
+}
+
+.category {
+    color: azure;
+    font-size: 2em;
+    margin-top: 40px;
+}
+
+.guess {
+    color: azure;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.lives {
+    color: azure;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.clue {
+    font-size: 2em;
+    color: azure;
+    margin-bottom: 30px;
+}
+
+.hint {
+    font-size: 1.5em;
+    height: 70px;
+    width: 130px;
+    background-color: lightgreen;
+    color: azure;
+    border-radius: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    transition: all 0.4s ease-in-out;
+}
+
+.reset {
+    font-size: 1.5em;
+    height: 100px;
+    width: 130px;
+    background-color: lightgreen;
+    color: azure;
+    border-radius: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hint:hover {
+    background-color: azure;
+    color: lightgreen;
+}
+
+.reset:hover {
+    background-color: azure;
+    color: lightgreen;
+}
+
+canvas {
+    color: azure;
+    border: 2px dashed azure;
+    padding: 15px;
+    margin-bottom: 40px;
+}
