@@ -1,0 +1,236 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@keyframes lord1{
+    0%{
+        background-image: url('ff1.png');
+    }
+   
+    20%{
+        background-image: url('ff2.png');
+    }
+    40%{
+        background-image: url('ff3.png');
+    }
+    60%{
+        background-image: url('ff4.png');
+    }
+    80%{
+        background-image: url('ff5.png');
+    }
+    100%{
+        background-image: url('ff1.png');
+    }
+}
+@keyframes disapear{
+    0%{
+        display: none;
+    }
+    50%{
+        position: relative;
+        opacity: 0;
+        top: 100px;
+    }
+    100%{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes lord3{
+    0%{
+        position: relative;
+        opacity: 0;
+        top: 100px;
+    }
+    100%{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+.logo{
+    height: 70px;
+    margin: 0px 10px;
+    border-radius: 20px;
+}
+
+.container-fluid{
+    /* background-color: rgb(199, 66, 17); */
+    background: linear-gradient(red,black);
+    opacity: 1;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+}
+
+.navbar{
+    z-index: 2;
+    color:  white;
+    font-size:  25px;  
+    padding: 5px 0px; 
+}
+.nav-link{
+    color: white;
+    margin: 0px 50px;
+}
+.nav-link:hover{
+    color: yellow;
+}
+.empty{
+    height: 500px;
+    padding: 100px 50px 0px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style:italic;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text{
+    /* border: 2px solid black; */
+    width:fit-content ;
+    height: 500px;
+    border-radius: 10px;
+    /* background-image: url(display2.png);  */
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    animation-name: lord3;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.text h1{
+    margin: 20px;
+    background: -webkit-linear-gradient(orange,red,yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 1000;
+    box-shadow: 3px 3px 3px black;
+}
+.text p{
+    font-size:25px ;
+    /* font-weight: 2000; */
+    /* text-shadow: 2px 0px black; */
+    color:rgb(224, 37, 81);
+    background: -webkit-linear-gradient(yellow,red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+}
+.p{
+    background:linear-gradient(transparent,black);
+    box-shadow: 5px 5px 5px black;
+}
+.cont{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 20px 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: transform 0.2s;
+    box-shadow: 9px 9px 8px black;
+    overflow: hidden;
+    border-radius:0px 60px;
+    transition: border-radius width height 1s;
+    animation-name: disapear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.card:hover{
+    transform: scale(1.1);
+    border-color: red;
+    border-radius: 60px;
+    position: relative;
+    background:linear-gradient(purple,purple,pink);
+    z-index: 1;
+}
+.card::before{
+    content:"";
+    background:linear-gradient(violet,pink);
+    position:absolute;
+    
+    width:100%;
+    height:100%;
+    z-index:-3;
+    opacity:0.7; 
+} 
+
+.btn-primary{
+    background:linear-gradient(red,black);
+    border: 2px solid purple;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px 10px 10px 30px;
+}
+.btn-primary:hover{
+    background: linear-gradient(blue,black);
+    transform: scale(1.1);
+    border-radius: 10px 10px 10px 50px;
+}
+.img{
+    height: 200px;
+    animation-name: lord1;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    background-size:cover;
+    border-radius: 0px 60px 0px 0px;
+
+}
+
+.card-body{
+    font-weight: bold;
+    color: black;
+}
+.location{
+    position: absolute;
+    right: 40px;
+    bottom: 15px;
+    background-image: url(location-icon-png-4226.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border-radius: 5px ; */
+    /* border: 2px solid blue; */
+    height: 41px;
+    width: 40px;
+    box-shadow: 2px 2px 3px red;
+    /* border: 1px solid red; */
+}
+.location:hover{
+    box-shadow: 1px 1px 1px red;
+    transform:scale(1.1) ;
+}
+body{
+    margin: 0px;
+    background-image: url("bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    animation-name: lord2;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+@media screen and (max-width:500px) {
+    .logo{
+        height: 50px;
+    }
+    .text p{
+        font-size: 20px;
+    }
+    .container-fluid{
+        font-size: 20px;
+    }
+}
